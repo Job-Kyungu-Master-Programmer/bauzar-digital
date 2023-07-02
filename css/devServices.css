@@ -1,0 +1,114 @@
+
+
+
+
+    
+/*=================================
+    **  DEv SERVICES 
+===================================   */
+.heroDevlopment {
+    background-color: #e2e2e2cc;
+    min-height: 15em;
+}
+
+
+@media (max-width: 600px) {
+    .heroDevlopment {
+        font-size: 1.2em;
+        min-height: 24em;
+    }
+}
+
+@media (max-width: 600px) {
+    .heroDevlopment {
+        font-size: 1.7em;
+    }
+}
+
+.heroDevlopment__container { 
+    padding-top: 2em;
+    }
+
+    .heroDevlopment__top {
+        display: flex;
+        justify-content: space-between;;
+        max-width: 6.55em;
+    }
+
+        @media (max-width: 600px) { 
+           .heroDevlopment__top {
+              padding-bottom: 2em;
+           }
+        }
+
+    .heroDevlopment__link {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-size: .62em;
+        color: rgb(160, 160, 160);
+        text-align: relative;
+        border-bottom: .075em solid transparent;
+        transition: border .3s ease-in-out;
+    }
+    .heroDevlopment__link:first-child::after {
+                content:"";
+                position: absolute;
+                top: .50em;
+                right: -2.55em;
+                background-color: rgb(160, 160, 160);
+                opacity: .75;
+                width: 2em;
+                height: .10em;
+            }
+
+            .heroDevlopment__link:hover {
+            color: #3F4353;;
+            border-bottom: .075em solid #3F4353;;
+        }
+    
+
+    .heroDevlopment__bottom {
+        display: flex;
+        align-items: center;
+        min-height: 12em;
+    }
+
+    @media (max-width: 600px) { 
+        .heroDevlopment__bottom {
+            align-items: flex-start;
+            flex-direction: column;
+        }   
+    }
+
+    .heroDevlopment__blog-image {
+        margin-right: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.85em;
+        height: 3.85em;
+        border-radius: 50%;
+        background-color: #74D414;
+    }
+
+   @media (max-width: 950px) {
+    .heroDevlopment__img {
+          width: 2em;
+          height: 2em;
+    }
+   }
+
+    .heroDevlopment__title {
+        font-size: 1.85em;
+        font-weight: 400;
+        color: #3F4353;
+    }
+
+    @media (max-width: 600px) { 
+        .heroDevlopment__title {
+             font-size: 1.60em;
+        }
+    }
+
+

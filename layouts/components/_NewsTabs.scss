@@ -1,0 +1,240 @@
+
+
+
+//Design For Newstabs in File News.html
+
+
+.NewsTabs  {
+    background: rgb(234, 234, 234);
+
+    @media (max-width: 600px) {
+        font-size: calc(.0 * 0vw + 1.35em);
+    }
+
+    @media (max-width: 430px) {
+        font-size: calc(.0 * 0vw + 1.80em);
+    }
+
+    &__container {
+        min-height: auto;
+    }
+    
+    //TOP 
+    &__top {// Element Blog in None
+        display: none;
+    }
+
+    //MIDDLE
+    &__list-label {
+        @media (max-width: 600px) {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 7em;
+        }
+
+        @media (max-width: 430px) {
+           height: 6.50em;
+        }
+    }
+    &__middle {
+        padding: 6em 0 3em 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 4em;
+
+        @media (max-width: 600px) {
+            min-height: 3em;
+        }
+
+        @media (max-width: 430px) {
+            padding: 3em 0 2em 0;
+        }
+    
+    }
+
+    &__label {
+        margin-right: 2em;
+        padding: .70em 1em;
+        min-height: 2em;
+        background: #e1e1e1;
+        border: .075em solid #d0d0d0;
+        text-transform: uppercase;
+        font-size: .67em;
+        cursor: pointer;
+        transition: background .5s ease-in-out , border-color .3s linear, color .3s linear;
+
+        &:last-child {
+            margin-top: 0;
+        }
+
+        &:hover {
+            color: #f8f8f8;
+            border-color: #74D414;
+            background: #74D414;
+        }
+
+        @media (max-width: 600px) {
+            margin-right: .85em;
+        }
+
+        @media (max-width: 430px) {
+            margin-right: .30em;
+            margin-bottom: .50em;
+        }
+    }
+    //BOTTOM 
+    &__bottom {
+        padding: 0em 0 3em 0;
+    }
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.50em;
+    }
+
+    &__card {// Card 
+        position: relative;
+        display: block;
+        border: 0;
+        outline: 0;
+        color: inherit;
+        width: 23.63em;
+        min-height: 28em;
+        text-decoration: none;
+
+        &::after {
+            content:"";
+            position: absolute;
+            top: 0;left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(5, 35, 9);
+            opacity: 0;
+            pointer-events: none;
+            transition: none;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+
+            .NewsTabs__text--hover {
+                opacity: 1;
+                top: -.75em;
+                left: -.75em;
+            }
+        }
+    }
+
+    &__image {
+        overflow: hidden;
+        width: 100%;
+        height: 15em;
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: transform .5s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__text {
+        padding: 2.50em 0 .75em 0;
+    }
+
+    &__date {
+        margin-bottom: 2em;
+        color: #74D414;
+        font-size: .90em;
+        font-weight: 600;
+    }
+
+    &__content {
+        margin: 0;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 170%;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+    }
+
+    &__content--hover {
+        margin: 0;
+        font-size: .90em;
+        line-height: 140%;
+    }
+
+    //Hover 
+    &__text--hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 2.65em;
+        width: 100%;
+        height: 100%;
+        background-color: #f7f7f7;
+        border: .075em solid #cac9c9;
+        opacity: 0;
+        z-index: 10;
+        transition: top .5s ease-in-out, left .5s ease-in-out;
+
+        >strong {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 1.25em .75em;
+            padding-right: 4em;
+            font-size: .77em;
+            color: white;
+            background: transparent url('/img/arrowRight.svg') no-repeat 90% 55% / 28% 20%;
+            background-color: #74D414;
+            transition: background .5s ease-in-out, background-color .5s ease-in-out, color .3s linear;
+
+            &:hover {
+                color: #74D414;
+                background: transparent url('/img/arrowRight.svg') no-repeat 98% 55% / 30% 20%;
+                background-color: black;
+            }
+        }
+    }
+
+    //Element in OFF 
+    &__off {
+        // background: #979797;
+        // opacity: .10;
+        cursor: no-drop;
+        pointer-events: none;
+        border: .075em solid #ccc;
+
+        img {
+            opacity: .03;
+        }
+
+
+        .NewsTabs__text {
+            opacity: 0;
+        }
+
+        .NewsTabs__text--hover {
+            opacity: .01;
+            // display: none;
+
+            strong {
+                display: none;
+            }
+        }
+
+        .NewsTabs__content--hover {
+            opacity: .02;
+        }
+    }
+}

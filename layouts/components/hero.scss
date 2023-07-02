@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+        position: relative;
+        background-image: linear-gradient(rgba(243, 243, 243, 0), rgba(235, 235, 235, 0.445)),url('../img/hero-background.svg');
+        background-position: 1% 15%;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (max-width: 600px) {
+            background-attachment: scroll;
+            height: 70em;
+        }
+
+        @media (max-width: 500px) {
+            font-size: calc(.0 * 0vw + 1.23em);
+            padding-top: 10em;
+            height: 75em;
+        }
+
+        @media (max-width: 390px) {
+            font-size: calc(.0 * 0vw + 1.50em);
+        }
+
+        
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 500px) {
+             flex-direction: column;
+        }
+    }
+
+
+    &__left {
+        width: 35em;
+
+        @media (max-width: 500px) {
+            margin-bottom: 1em;
+            width: 100%;
+        }
+    }
+
+
+
+    &__title {
+        margin: 0;
+        margin-bottom: 1.45em;
+        font-weight: 400;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+
+
+    &__content {
+        margin:  0;
+        margin-bottom: 1em;
+        font-weight: 400;
+        font-size: 1em;
+        max-width: 18em;
+    }
+
+
+    &__content-bottom {
+        margin-bottom: 0;
+        font-weight: 300;
+        max-width: 28em;
+
+        strong {
+            font-weight: 500;
+            color: #74D414;
+        }
+    }
+
+
+
+    &__ellipse {
+        position: absolute;
+        bottom: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #74D414;// Autre couleur
+        border-radius: 50%;
+        width: 1.50em;
+        height: 1.50em;
+    }
+
+
+
+    &__ellipse-bulle {
+        border-radius: 50%;
+        width: 0.55em;
+        height: 0.55em;
+        background: #74D414;
+    }
+
+
+
+    &__right {
+        position: relative;
+        width: 35em;
+        height: 30em;
+        background: transparent url('../img/hero_programming.svg') no-repeat center center / contain;
+
+        @media (max-width: 500px) {
+            width: 100%;
+            height: 13em;
+        }
+
+        &::after {
+            content:"";
+            position: absolute;
+            top: 5em;
+            left: -9em;
+            width: 5em;
+            height: 5em;
+            display: none;
+            background: transparent url('../img/crochet.svg') no-repeat center center / contain;
+            
+            @media (max-width: 600px) {
+                width: 2em; height: 2em;
+            }
+        }
+    }
+}

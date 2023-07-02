@@ -1,0 +1,46 @@
+
+    /*=================================
+         ** DEVMAIN , Le Container qui separe navbar et services
+    ===================================   */
+    .DevMain {
+        position: relative;
+        padding: 5em 0 2em 0;
+        display: flex;
+      }
+
+      @media (max-width: 600px) {
+           .DevMain {
+            padding: 2.6em 0 2em 0;
+            font-size: 3.4em;
+            flex-direction: column-reverse;
+           }
+      }
+
+      @media (max-width: 373px) {
+        .DevMain {
+         font-size: 3.9em;
+        }
+   }
+
+      .DevMain::before {
+        content: "";
+        position: absolute;
+        top: -5em;
+        right: -11em;
+        width: 20em;
+        height: 20em;
+        border: 0.075em solid #ccc;
+        border-radius: 50%;
+      }
+      .DevMain__services {
+        width: 60em;
+      }
+      .DevMain__Navbar {
+        position: relative;
+        border: 0.075em solid #ccc;
+        z-index: 1;
+        min-width: 17em;
+        height: 27em;
+        background: radial-gradient(38.6% 73.42% at 50.76% 50%, #F7F7F7 0%, #EDEDED 100%);
+      }
+      

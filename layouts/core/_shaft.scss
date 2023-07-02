@@ -1,0 +1,264 @@
+
+
+//Design For Shaft "--"
+
+.shaft {
+    padding: 3em 0 3em 0;
+    height: 63em;
+
+    @media (max-width: 600px) {
+        font-size: calc(.0 * 0vw + 1.55em);
+
+        display: none;
+    }
+
+    &__title {
+        position: relative;
+        margin: 0;
+        margin-bottom: 2em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2em;
+        font-weight: 400;
+        // color: #303030d2;
+        color: black;
+        z-index: 2;
+        max-width: 100%;
+
+        &::after {
+            content:"Digitalisez votre Entreprise";
+            position: absolute;
+            top: -.80em;
+            left: 0;
+            font-size: 3em;
+            font-weight: 700;
+            line-height: 100%;
+            text-transform: uppercase;
+            z-index: -1;
+            color: #e3e3e3b4;
+            opacity: .50;
+            
+        }
+    }
+
+    &__container {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+    }
+
+    //Modal Shaft 
+    &__modal-root {
+        position: relative;
+        margin: 9em auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: .1em solid  #dddddd;
+        border-radius: 50%;
+        width: 42em;
+        height: 42em;
+    }
+
+    &__element {
+        position: relative;
+    }
+
+    &__modal {
+        position: absolute;
+        // top: 0;
+        // left: 0;
+    }
+
+    //Modal Left
+    &__left__modal {
+        @include shaftRounded();
+
+        &:nth-child(1){
+            top: -18em;
+            left: -1.55em;
+            
+            .shaft__modal__content {
+                position: absolute;
+                left: -10.45em;
+            }
+        }
+
+        &:nth-child(2) {
+            top: -1em;
+            left: -9em;
+
+            .shaft__modal__content {
+                position: absolute;
+                left: -8.65em;
+            }
+        }
+
+        &:nth-child(3) {
+            bottom: -19em;
+            left: -1em;
+
+            .shaft__modal__content {
+                position: absolute;
+                left: -7em;
+            }
+        }
+    }
+
+    //Modal right 
+    &__right__modal {
+        @include shaftRounded();
+
+        &:nth-child(1){
+            top: -18em;
+            right: -1.55em;
+            
+            .shaft__modal__content {
+                position: absolute;
+                left: -2em;
+            }
+        }
+
+        &:nth-child(2) {
+            top: -1em;
+            right: -9em;
+
+            .shaft__modal__content {
+                position: absolute;
+                left: -5em;
+            }
+        }
+
+        &:nth-child(3) {
+            bottom: -19em;
+            right: -1em;
+
+            .shaft__modal__content {
+                position: absolute;
+                left: -6em;
+            }
+        }
+
+        
+    }
+
+    &__modal__center {// Rounded in Rounded child 
+        width: 2.3em;
+        height: 2.3em;
+        border-radius: 50%;
+        
+    }
+    
+    &__modal__link {
+        display: block;
+        width: 2.3em;
+        height: 2.3em;
+        border-radius: 50%;
+        background: transparent url('/img/video.gif') no-repeat center center / cover;
+        transition: background .5s ease-in-out;
+
+        &:hover {
+            background: #74D414;
+        }
+    }
+
+    &__modal__content {//Link Services 
+        position: absolute;
+        bottom: -2.65em;
+        font-size: .88em;
+        font-weight: 3400;
+        line-height: 120%;
+        width: 17em;
+        text-align: center;
+        color: #303030d2;
+        transition: color .3s linear;
+
+
+        &:hover {
+            color: #74D414;
+        }
+    }
+
+    &__center {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 28em;
+        height: 28em;
+        border: .1em solid rgb(233, 233, 233);;
+        background: transparent url('/img/ShaftCroiser.svg') no-repeat center center / 76%;
+
+        &::before {
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 2em;
+            width: 11em;
+            height: 11em;
+            background: transparent url('/img/shaftWatterLow.svg') no-repeat center center / 76%;
+        }
+
+        &::after {
+            content:"";
+            position: absolute;
+            bottom: 0;
+            left: 2em;
+            width: 14em;
+            height: 14em;
+            background: transparent url('/img/shaftWather.svg') no-repeat center center / 76%;
+        }
+    }
+
+    &__center__center {
+        width: 19em;
+        height: 19em;
+
+       &::before {
+           content:"";
+           position: absolute;
+           top: -8em;
+           right: -26em;
+           width: 23em;
+           height: 23em;
+           background: transparent url('/img/ShaftWather2.svg') no-repeat center center / 76%;
+       }
+
+       &::after {
+        content:"";
+        position: absolute;
+        top: .90em;
+        left: 10.75em;
+        width: 6em;
+        height: 6em;
+        background: transparent url('/img/fav.svg') no-repeat center center / 76%;
+    }
+   }
+
+   &__center__center__molecul {
+         width: 19em;
+         height: 19em;
+
+        &::before {
+            content:"";
+            position: absolute;
+            top: -8em;
+            left: -29em;
+            width: 15em;
+            height: 15em;
+            background: transparent url('/img/shaftMolecul.svg') no-repeat center center / 76%;
+        }
+
+        &::after {
+            content:"";
+            position: absolute;
+            bottom: -10em;
+            left: -18em;
+            width: 11em;
+            height: 11em;
+            background: transparent url('/img/shaftWatterLow.svg') no-repeat center center / 76%;
+        }
+   }
+}

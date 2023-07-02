@@ -1,0 +1,63 @@
+
+    /* NAVBAR  === */
+    .DevMain__Navbar {}
+
+    @media (max-width: 600px) {
+        .DevMain__Navbar {
+            margin-bottom: 1.1em;
+        }
+    }
+
+    @media (max-width: 373px) {
+        .DevMain__Navbar {
+            margin-bottom: 2.1em;
+        }
+    }
+        .DevMain__Navbar__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .DevMain__Navbar__item {
+            height: 3em;
+            width: 100%;
+            border-bottom: 1px solid #cccc;
+            border-left: .25em solid transparent;
+            transition: border .5s ease-in-out;
+            
+        }
+
+        .DevMain__Navbar__item:hover {
+            border-left: .25em solid #74D414;
+        }
+        
+        .DevMain__Navbar__link {
+                color: #74D414;
+        }
+
+        .DevMain__Navbar__item--active {
+            color: #74D414;
+            border-left: .25em solid #74D414;
+        }
+
+        .DevMain__Navbar__link {
+            color: #74D414;
+        }
+
+        .DevMain__Navbar__link:hover {
+            color: #74D414;
+        }
+
+        .DevMain__Navbar__link {
+            padding-left: 1em;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            color: #3F4353;
+            transition: color .3s linear;
+            border-left: .25em solid transparent;
+        }

@@ -1,0 +1,191 @@
+
+
+
+.preview {
+
+
+  &__container {
+          padding-bottom: 1.68em;
+          padding-top: 3.25em;
+          display: flex;
+          justify-content: space-between;
+
+          @media (max-width: 600px) {
+            font-size: calc(.0 * 0vw + 2.20em);
+              flex-direction: column;
+          }
+
+          @media (max-width: 490px) {
+            font-size: calc(.0 * 0vw + 2.85em);
+          }
+      }
+
+      &__left {
+          position: relative;
+          padding: 0.35em 2em 1em 0;
+          display: flex;
+          flex-direction: column; 
+          flex-grow: 1;
+
+          @media (max-width: 600px) {
+            padding: .35em 0 1em 0;
+            width: 100%;
+          }
+          
+          
+          &::after {
+            content:"L'agence Digitale en Afrique-Centrale,Cameroun, RDCongo, qui vous accompagne vers la modernisation de votre Entreprise et votre plateforme d'Enseignement ou Hospitalière.";
+            position: absolute;
+            top: 12em;
+            padding: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            text-align: center;
+            line-height: 190%;
+            width: 26em; 
+            min-height: 23em;
+            z-index: 6;
+            cursor: pointer;
+            transform: translateX(100%);
+            background: transparent url('../img/preview-ellipse.svg') no-repeat center center / contain;
+            transition: background-color 1s ease-in-out , color 1s linear , border 0.8s ease-in-out;
+          
+             @media (max-width: 600px) {
+                  display: none;
+             }
+          }
+          
+          
+          &:hover::after {
+            color: #FFF;
+            background-color: #74D414;
+          }
+      }
+
+
+
+
+
+      &__blog {
+        position: absolute;
+        bottom: 5em;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        text-align: left;
+        width: 9em;
+        height: 9em;
+        @include BtnGif();
+
+        @media (max-width: 600px) {
+          display: none;
+        }
+      }
+
+
+
+      &__blog-link {
+        display: inline-block;
+        padding-left: 1em;
+        padding-bottom: 1em;
+        cursor: pointer;
+        z-index: 2;
+        font-weight: 500;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: inherit;
+        min-width: 17em!important;
+        height: 5%;
+        border: 0;
+        outline: 0;
+        transition: 0.3s linear , weight 0.3s ease-in-out;
+      }
+
+      &__title {
+          margin: 0;
+          margin-bottom: 1em;
+          position: relative;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 2em;
+          z-index: 10;
+          max-width: 85%;
+
+          &::before {
+            content:"";
+            position: absolute;
+            top: -1.65em;
+            left: -1.35em;
+            width: 2em;
+            height: 2em;
+            background: transparent url('../img/preview-taking.png') no-repeat center center / contain;
+            
+            @media (max-width: 600px) {
+                left: -.85em;
+            }
+          }
+
+          &::after {
+             content:"";
+             position: absolute;
+             bottom: 0.5em;
+             left: 0.27em;
+             width: 38.60%;
+             height: 0.2em;
+             z-index: -1;
+             display: none;
+             background-color: #6C63FF ;
+          }
+      }
+
+      &__content {
+          margin: 0;
+          margin-bottom: 0.7em;
+          line-height: 148%;
+
+          @media (max-width: 490px) {
+              font-size: 1.10em;
+              max-width: 100%;
+              text-align: relative;
+          }
+      }
+
+      &__content-bottom {
+          margin: 0;
+          text-align: justify;
+          line-height: 148%;
+          letter-spacing: 0em;
+          max-width: 55%;
+
+
+          > strong {
+             font-weight: 600;
+          }
+
+          @media (max-width: 600px) {
+              font-size: 1.10em;
+              max-width: 100%;
+          }
+      }
+
+      &__right {
+         padding-top: 5em;
+
+         @media (max-width: 600px) {
+            padding-top: 1.65em;
+         }
+      }
+
+      &__image {
+          object-fit: cover;
+          width: 28em;
+          height: 40em;
+
+          @media (max-width: 600px) {
+              width: 100%;
+              height: 32em;
+          }
+      }
+}

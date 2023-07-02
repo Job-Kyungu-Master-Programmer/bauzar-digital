@@ -1,0 +1,15 @@
+{
+  "name": "react-digital",
+  "version": "1.0.0",
+  "description": "Bauzar-Digital , IT-Service",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./css/main.css --style compressed"
+  },
+  "author": "Job_Kyungu_Lodo",
+  "license": "ISC",
+  "dependencies": {
+    "sas": "^3.0.4",
+    "sass": "^1.62.1"
+  }
+}

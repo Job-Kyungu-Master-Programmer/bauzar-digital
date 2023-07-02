@@ -1,0 +1,117 @@
+
+
+
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    box-sizing: border-box;
+    font-size: 1.21vw;
+    font-family: 'Raleway', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    overflow-X: hidden;
+    background: radial-gradient(38.6% 73.42% at 50.76% 50%, #F7F7F7 0%, #EDEDED 100%);
+    width: 100%;
+
+    &::-webkit-scrollbar {
+        width: .3em;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #74D414;
+    }
+
+
+    @media (max-width: 600px) {
+        html,
+        body {
+             font-size: 100%;
+        }
+    }
+}
+
+
+
+
+.container {
+    filter: blur(100%);
+    margin: 0 auto;
+    padding-left: 2.88em;
+    max-width: 77rem;
+
+    @media (max-width: 600px) {
+         padding-left: 0;
+         font-size: calc(.0 * 0vw + 2.50em);
+    }
+}
+
+
+
+
+
+// Functions 
+
+@import "./layouts/components/functions/funbctions";
+//Variables 
+@import "./layouts/variables/variables";
+
+
+
+// Files For index.html
+@import "./layouts/components/header";
+@import "./layouts/components/hero";
+@import "./layouts/components/banner";
+@import "./layouts/components/about";
+@import "./layouts/components/preview";
+@import "./layouts/components/skills";
+@import "./layouts/components/single";
+@import "./layouts/components/homeForm";
+@import "./layouts/components/mouse";
+@import "./layouts/components/footer";
+@import "./layouts/components/abouthead";
+//Files For About.html 
+@import "./layouts/core/teams";
+@import "./layouts/core/aboutBanner";
+@import "./layouts/core/aboutSlider";
+//File For Services.html
+@import "./layouts/core/servicesHero";
+@import "./layouts/core/shaft";
+@import "./layouts/components/estimate";
+@import "./layouts/components/estimatePop";
+@import "./layouts/components/servicePreview";
+@import "./layouts/components/BannerserviceMoodle";
+//Files Login 
+@import "./layouts/core/login";
+//Partenaire File Only
+@import "./layouts/core/partenaires";
+//File News
+@import "./layouts/core/HeroNews";
+@import "./layouts/components/NewsTabs";
+//File Contact 
+@import "./layouts/core/ContactBanner";
+@import "./layouts/core/ContactHero.scss";
+@import "./layouts/components/ContactPop";
+// Burger Menu
+@import "./layouts/components/Burger";
+
+//Pop 
+@import "./layouts/components/pop";
+// IMG Cursor 
+#image_suit_souris {
+    @media (max-width: 600px) {
+        display: none!important;
+    }
+}
+
+

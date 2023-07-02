@@ -1,0 +1,136 @@
+
+
+//Design for Service Preview 
+
+.servicePreview {
+    padding: 4em 0 2em 0;
+    // border: 5px solid red;;
+
+    @media (max-width: 600px) {
+        font-size: calc(.0 * 0vw + 1.30em);
+    }
+
+    @media (max-width: 500px) {
+        font-size: calc(.0 * 0vw + 1.85em);
+    }
+
+    @media (max-width: 410px) {
+        font-size: calc(.0 * 0vw + 2em);
+    }
+
+    &__container {
+        min-height: auto;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 1.77em;
+        font-size: 1.50em;
+        font-weight: 400;
+        color: $--color-DarkLow;
+        text-transform: uppercase;
+        max-width: 90%;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-right: 1em;
+        margin-bottom: 1em;
+        padding: 2em 1em 2em 1em;
+        width: 17.69em;
+        min-height: 15em;
+        border: .071em solid rgb(226, 226, 226);
+        background-color: rgb(235, 235, 235);
+
+        &:nth-child(4n) {
+            margin-right: 0;
+            // background: red;
+        }
+
+        @media (max-width: 600px) {
+            margin-right: 0;
+            margin-bottom: 1.50em;
+            border: .071em solid rgb(216, 216, 216);
+            width: 100%;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.50em;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background: #74D414;
+    }
+
+    &__name {
+        margin-bottom: .87em;
+        font-size: 1.10em;
+        font-weight: 300;
+        color: $--color-DarkLow;
+        text-transform: uppercase;
+        max-width: 99%;
+
+        @media (max-width: 500px) {
+            color: #181818;
+        }
+    }
+
+    &__content {
+        font-size: .88em;
+        font-weight: 300;
+        text-align: relative;
+        line-height: 120%;
+        color: $--color-DarkLow;
+    }
+
+    &-last {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background .5s ease-in-out;
+        text-align: center;
+        background: #74D414;
+
+        svg {
+            transform: rotate(180deg);
+            stroke: white;
+            transition: margin .5s ease-in-out;
+        }
+
+        &:hover {
+             background: #74D414;
+            svg {
+                margin-left: 2em;
+                stroke: white;
+            }
+
+            .servicePreview__name-last {color: white;}
+        }
+    }
+
+    &__name-last {
+        margin-bottom: 4em;
+        padding: 1em;
+        color: white;;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+    }
+}

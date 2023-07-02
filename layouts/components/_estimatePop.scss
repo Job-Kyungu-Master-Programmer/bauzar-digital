@@ -1,0 +1,250 @@
+
+
+
+
+//Design For Estimate Pop in file Services.html
+
+.estimate__pop {                                                                                                                                                                                                                                                                                            
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 8000;
+    background: rgba(12, 43, 7, 0.694);
+    animation: Hoos .80s ease-in-out;
+    
+
+    // display: none;
+
+    @keyframes Hoos {
+        to{opacity: 1;}
+        from{opacity: 0;}
+    }
+    
+
+    .estimate__form {
+        position: relative;
+        padding: 1.2em 1.35em;
+        display: flex;
+        width: 55em;
+        min-height: 22em;
+        background-color: #74d414;
+        overflow: hidden;
+        animation: Alt .60s ease-in-out;
+        background-image: url('/img/popWoman.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        @keyframes Alt {
+            to{transform:translateY(0%);}
+            from{transform: translateY(-30%);}
+        }
+
+        @media (max-width: 1028px) {
+            font-size: calc(.0 * 0vw + 1.4em);
+        }
+
+        @media (max-width: 779px) {
+            font-size: calc(.0 * 0vw + 1.6em);
+        }
+
+        @media (max-width: 441px) {
+            font-size: calc(.0 * 0vw + 2.3em);
+        }
+
+        @media (max-width: 400px) {
+            font-size: calc(.0 * 0vw + 2.2em);
+        }
+
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-position: 70% 100%;
+            background-size: cover;
+        }
+
+        &__left {
+            @media (max-width: 600px) {
+                width: 100%;
+                // background: green;
+            }
+        }
+
+        &__title {
+            margin: 0;
+            margin-bottom: .55em;
+            text-transform: uppercase;
+            font-size: 1.87em;
+            font-weight: 300;
+            color: $--color-DarkLow;
+        }
+
+        &__content {
+            margin: 0;
+            margin-bottom: 3em;
+            font-size: .67em;
+            font-weight: 200;
+        }
+
+
+        &__inputs {
+            display: flex;
+            justify-content: space-between;
+            width: 37em;
+
+            > input {
+                margin-right: 3em;
+            }
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+
+
+        &__input {
+            position: relative;
+            margin-bottom: 1.35em;
+            padding: 1em 1em 0.20em .030em;
+            border: none;
+            outline: none;
+            border-bottom: .075em solid #60ae13;
+            width: 80%;
+            background: transparent;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+
+            &::placeholder {
+                position: absolute;
+                top: 0;
+                left: .030em;
+                color: rgb(44, 44, 44);
+            }
+
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+        }
+
+        &__flex {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 3em;
+
+            @media (max-width: 500px) {
+                margin-bottom: .35em;
+            }
+        }
+
+        &__select {
+            padding: 0!important;
+            padding-bottom: 0.80em!important;
+            margin-right: 2em;
+            cursor: pointer;
+        }
+
+        &__confi-content {
+            padding-left: 1em;
+            font-size: .90em;
+            background: transparent url('/img/candenat.svg') no-repeat left center /1.65%;
+        }
+
+        &__link {
+            border: 0;
+            outline: 0;
+            color: inherit;
+            transition: color .3s linear;
+            color: $--color-DarkLow;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+
+        &__right {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10em;
+
+            &::after {
+                display: none;
+                content:"";
+                position: absolute;
+                width: 150%;
+                height: 150%;
+                border: .075em solid #60ae13;
+                border-radius: 50%;
+            }
+
+            @media (max-width: 600px) {
+                justify-content: flex-end;
+                height: 100%;
+                width: 100%;
+            }
+
+            @media (max-width: 400px) {
+                font-size: calc(.0 * 0vw + .7em);
+            }
+        }
+
+        &__button {
+            position: relative;
+            @include HoverGif();
+            margin-left: .3em;
+            text-shadow: 1px 1px 2px rgb(88, 88, 88);
+            border: 0;
+            outline: 0;
+            font-weight: 300;
+            background: transparent;
+            cursor: pointer;
+
+            &::before {
+                border: .075em solid #60ae13;
+            }
+        }
+
+        &__close-pop {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            transform: rotate(12deg);
+            cursor: pointer;
+            transition: transform .5s ease-in-out;
+
+            &:hover {
+                transform: rotate(152deg);
+                stroke:rgb(44, 44, 44);
+            }   
+        }
+    }
+
+    .impact-out {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+.estimateDevForm {
+   @media (max-width: 600px) {
+    font-size: calc(.0 * 0vw + .65em)!important;
+   }
+
+   @media (max-width: 400px) {
+    font-size: calc(.0 * 0vw + .50em)!important;
+   }
+}

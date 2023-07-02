@@ -1,0 +1,216 @@
+
+
+
+
+
+
+.skills {
+    background-color: #F8F8F8;
+
+    @media (max-width: 600px) {
+        font-size: calc(.0 * 0vw + 1.2em);
+    }
+
+    @media (max-width: 400px) {
+        font-size: calc(.0 * 0vw + 1.4em);
+    }
+    
+    
+    &__container {
+        padding-top: 2.5em;
+        padding-bottom: 3.2em;
+    }
+
+
+    &__title {
+        margin: 0;
+        margin-bottom: 0.68em;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 2em;
+        max-width: 75%;
+
+        @media (max-width: 600px) {
+            max-width: 100%;
+        }
+    }
+
+
+
+    &__sub-title {
+        margin: 0;
+        margin-bottom: 0.88em;
+        font-weight: 500;
+        max-width: 56%;
+
+        @media (max-width: 400px) { 
+            max-width: 100%;
+        }
+    }
+
+
+
+    &__content {
+        margin: 0;
+        margin-bottom: 1.85em;
+        font-weight: 400;
+        max-width: 40%;
+        line-height: 150%;
+
+        @media (max-width: 600px) {
+            max-width: 100%;
+        }
+    }
+
+
+    
+    &__list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        max-width: 75em;
+
+        @media (max-width: 600px) {
+            font-size: calc(.0 * 0vw + 1.1em);
+        }
+    }
+
+
+
+    &__item {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 400;
+        width: 17em;
+        min-height: 10em;
+        transition: background-color 0.3s ease-in-out;
+
+
+        &:nth-child(3n) {
+            border-left: 0.1em solid #ccc;
+            border-top: 0.1em solid #ccc;
+
+            @media (max-width: 600px) 
+            { border: 0;}
+        }
+
+
+
+        &:nth-child(3n) {
+            border-bottom: 0.1em solid #ccc;
+            @media (max-width: 600px) 
+            { border: 0;}
+        }
+
+
+        &:nth-child(2n) {
+            border-left: 0.1em solid #ccc;
+            @media (max-width: 600px) 
+            { border: 0;}
+        }
+
+
+
+        &:nth-child(2) {
+            border-top: 0.1em solid #ccc;
+            @media (max-width: 600px) 
+            { border: 0;}
+        }
+
+
+        &:nth-child(1) {
+            border-top: 0.1em solid #ccc;
+            border-left: 0.1em solid #ccc;
+            border-bottom: 0.1em solid #ccc;
+            @media (max-width: 600px) 
+            { border: 0;}
+        }
+
+
+
+        &:nth-child(4) {
+            border-top: 0.1em solid #ccc;
+            border-right: 0.1em solid #ccc;
+            border-bottom: 0.1em solid #ccc;
+            @media (max-width: 600px) 
+            { border: 0;}
+        }
+
+
+        &:nth-child(5) {
+            border-bottom: 0.1em solid #ccc;
+            border-left: 0.1em solid #ccc;
+            @media (max-width: 600px) 
+            { border: 0;}
+        }
+
+
+        &:nth-child(7) {
+            border-left: 0.1em solid #ccc;
+            border-right: 0.1em solid #ccc;
+            border-bottom: 0.1em solid #ccc;
+            @media (max-width: 600px) 
+            { border: 0;}
+        }
+
+
+
+        &:hover {
+            background-color: #74D414;
+            color: #fff;
+            .skills__image {
+                background-color: rgb(48, 48, 48);
+                // background: #63A375;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+            margin-bottom: 1.35em;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+
+
+            border: .075em solid #ccc!important;
+     }
+       
+    }
+    
+    &__text { }
+
+    &__image {
+        margin-right: 1em;
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        border-radius: 50%;
+        min-width: 3.30em;
+        height: 3.30em;
+        background-color: #74D414;
+        transition: background-color 0.5s ease-in-out;
+
+        @media (max-width: 600px) {
+            margin-right: 0;
+            margin-bottom: 1.5em;
+        }
+    }
+
+
+    &__img {
+        width: 1.20em;
+        height: 1.20em;
+    }
+
+
+
+}

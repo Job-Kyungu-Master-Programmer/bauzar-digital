@@ -1,0 +1,234 @@
+
+
+
+
+
+
+
+
+
+// .homeForm  {
+//     display: flex;
+//     align-items: center;
+//     min-height: 35em;
+
+//     @media (max-width: 600px) {
+//         font-size: calc(.0 * 0vw + 1.2em);
+//         min-height: 50em;
+//     }
+
+//     @media (max-width: 430px) {
+//         font-size: calc(.0 * 0vw + 1.85em);
+//     }
+    
+//     &__container {
+//         padding: 0;
+
+//         @media (max-width: 600px) {
+//             display: flex;
+//             align-items: center;
+//             height: 30em;
+//         }
+//     }
+
+
+
+//     &__form {
+//         padding: 2em;
+//         display: flex;
+//         align-items: center;
+//         height: 23em;
+//         width: 56em;
+//         background-color: #74D414;
+
+//         @media (max-width: 600px) {
+//             display: flex;
+//             flex-direction: column;
+//             width: 100%;
+//             height: 24em;
+//         }
+
+//         @media (max-width: 430px) {
+//             height: 26em;
+//         }
+//     }
+
+
+//     &__left {
+//         margin-right: 2em;
+//         width: 35em;
+
+//         @media (max-width: 600px) {
+//             display: flex;
+//             flex-direction: column;
+//             width: 100%;
+//         }
+//     }
+
+
+//     &__title {
+//         margin: 0;
+//         margin-bottom: 1.2em;
+//         font-weight: 500;
+//     }
+
+
+
+//     &__input {
+//         position: relative;
+//         padding: 1em 1em 0.2em 0;
+//         color: rgb(0, 0, 0);
+//         outline: none;
+//         border: none;
+//         border-bottom: 1px solid #333;
+//         background: transparent;
+//         -webkit-appearance: none!important;
+//         -moz-appearance: none!important;
+//         appearance: none!important;
+//         border-radius: 0!important;
+
+
+//         @media (max-width: 430px) {
+//             width: 100%;
+
+//             &:active {
+//                 background: transparent!important;
+//             }
+//         }
+
+
+//          &::placeholder {
+//             position: absolute;
+//             top: -0.15em;
+//             left: 0;
+//             font-size: 0.75em;
+//             font-weight: 400;
+//             color: inherit;
+//          }
+//     }
+
+
+
+//     &__inputname {
+//         margin-bottom: 2em;
+//         width: 100%;
+//     }
+
+
+
+
+//     &__list-input {
+
+//          > .homeForm__input {
+//             width: 40%;
+//             margin-right: 3em;
+            
+//             &:last-child {
+//                 margin-right: 0;
+//             }
+
+//             @media (max-width: 430px) {
+//                 margin-right: 0;
+//                 margin-bottom: 1.5em;
+//                 width: 100%;
+
+
+//                 &:last-child {
+//                     margin-bottom: 0;
+//                 }
+//             }
+//          }
+//     }
+
+
+//     &__confidentiality {
+//         padding-top: 2em;
+//         display: flex;
+//         height: 9em;
+
+//         @media (max-width: 600px) {
+//             height: 4em;
+//         }
+
+//         @media (max-width: 430px) {
+//             padding-top: 1em;
+//             font-size: .75em;
+//         }
+//     }
+
+
+
+     
+//     &__img {
+//         width: 0.80em;
+//         height: 0.75em;
+//     }
+
+
+
+//     &__link {
+//         border: 0;
+//         outline: 0;
+//         color: inherit;
+//         transition: opacity 0.3s linear;
+
+
+//         &:hover {
+//             opacity: 0.5;
+//         }
+//     }
+
+//     &__confi-content {
+//         font-size: 0.65em;
+//     }
+
+//     &__right {
+//        position: relative;
+//        display: flex;
+//        align-items: center;
+//        @include BtnGif();
+//        width: 5.7em;
+//        height: 5.7em;
+//        border-radius: 50%;
+
+//        @media (max-width: 600px) {
+//              justify-content: center;
+//              border-radius: 50%;
+//              height: 0;
+//              min-height: 6em;
+//              width: 6em;
+//              background: transparent;
+//        }
+
+//        @media (max-width: 430px) {
+//            transform: translateX(-70%);
+//        }
+//     }
+
+//     &__button {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         font-weight: 500;
+//         border: none;
+//         outline: none;
+//         z-index: 5;
+//         cursor: pointer;
+//         min-width: 15em;
+//         min-height: 100%;
+//         background: transparent;
+//         transition: color 0.5s linear;
+
+//         @media (max-width: 430px) {
+//             left: -.50em;
+//         }
+
+//         @media (max-width: 380px) {
+//             left: -.20em;
+//         }
+//     }
+// }
+
+// .aboutForme {
+//     min-height: 27em;
+// }

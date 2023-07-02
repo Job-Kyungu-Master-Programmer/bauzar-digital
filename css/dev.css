@@ -1,0 +1,196 @@
+
+
+/*// Dev File For All Pages Services Details
+//Dev Banner*/
+.devBanner {
+    min-height: 20em;
+    background: rgb(228, 228, 228);
+
+}
+    .devBanner__container {
+        padding: 3em 2em 0 5.65em;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .devBanner__top {
+        display: flex;
+        margin-bottom: 5em;
+        margin-left: .20em;
+        border-bottom: .075em solid transparent;
+        transition: border-bottom .5s ease-in-out;
+        
+    }
+    .devBanner__top:hover {
+            border-bottom: .075em solid rgb(202, 202, 202);
+        }
+
+     .devBanner__link {
+       display: block;
+       font-size: .90em;
+       text-decoration: none;
+       color: rgb(170, 170, 170);
+       transition: color .3s linear;
+    }
+       
+       .devBanner__link:first-child {
+          position: relative;
+          margin-right: 2.40em;
+       }
+          .devBanner__link:first-child::after {
+              content:"";
+              position: absolute;
+              right: -1.90em;
+              top: .50em;
+              width: 1.40em;
+              height: .15em;
+              background: rgb(170, 170, 170);
+          }
+
+     .devBanner__bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    .devBanner__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1em;
+        width: 3.85em;
+        height: 3.85em;
+        border-radius: 50%;
+        background-color: #74D414;
+    }
+
+    .devBanner__title {
+        font-size: 1.75em;
+        text-transform: uppercase;
+    }
+
+
+
+/*=================================
+    **  DETAILS NAVBAR 
+===================================   
+.heroDevlopment {
+    background-color: #e2e2e2cc;
+    min-height: 15em;
+}
+.heroDevlopment__container { 
+    padding-top: 2em;
+    }
+
+    .heroDevlopment__top {
+        display: flex;
+        justify-content: space-between;;
+        max-width: 6.55em;
+    }
+
+    .heroDevlopment__link {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-size: .62em;
+        color: rgb(160, 160, 160);
+        text-align: relative;
+        border-bottom: .075em solid transparent;
+        transition: border .3s ease-in-out;
+    }
+    .heroDevlopment__link:first-child::after {
+                content:"";
+                position: absolute;
+                top: .50em;
+                right: -2.55em;
+                background-color: rgb(160, 160, 160);
+                opacity: .75;
+                width: 2em;
+                height: .10em;
+            }
+
+            .heroDevlopment__link:hover {
+            color: #3F4353;;
+            border-bottom: .075em solid #3F4353;;
+        }
+    
+
+    .heroDevlopment__bottom {
+        display: flex;
+        align-items: center;
+        min-height: 12em;
+    }
+
+    .heroDevlopment__blog-image {
+        margin-right: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.85em;
+        height: 3.85em;
+        border-radius: 50%;
+        background-color: #74D414;
+    }
+
+    .heroDevlopment__title {
+        font-size: 1.85em;
+        font-weight: 400;
+        color: #3F4353;
+    }
+
+
+
+
+    /* NAVBAR  === 
+    .DevMain__Navbar {}
+        .DevMain__Navbar__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .DevMain__Navbar__item {
+            height: 3em;
+            width: 100%;
+            border-bottom: 1px solid #cccc;
+            border-left: .25em solid transparent;
+            transition: border .5s ease-in-out;
+            
+        }
+
+        .DevMain__Navbar__item:hover {
+            border-left: .25em solid #74D414;
+        }
+        
+        .DevMain__Navbar__link {
+                color: #74D414;
+        }
+
+        .DevMain__Navbar__item--active {
+            color: #74D414;
+            border-left: .25em solid #74D414;
+        }
+
+        .DevMain__Navbar__link {
+            color: #74D414;
+        }
+
+        .DevMain__Navbar__link:hover {
+            color: #74D414;
+        }
+
+        .DevMain__Navbar__link {
+            padding-left: 1em;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            color: #3F4353;
+            transition: color .3s linear;
+            border-left: .25em solid transparent;
+        }
+    
+     

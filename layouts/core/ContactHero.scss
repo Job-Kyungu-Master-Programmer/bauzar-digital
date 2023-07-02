@@ -1,0 +1,102 @@
+
+
+
+
+// For Contact Hero 
+
+.ContactHero  {
+    width: 100%;
+    height: 38.4em;
+    background-image:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.162)),url('/img/wepik-export-20230521131059aUN9.png');
+    background-repeat: no-repeat;
+    background-position: 100% 5%;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+
+    @media (max-width: 600px) {
+        font-size: calc(.0 * 0vw + 1em);
+        height: 115em;
+    }
+
+    @media (max-width: 400px) {
+        font-size: calc(.0 * 0vw + 1.5em);
+        height: 100em;
+        background-attachment: scroll;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        @media (max-width: 600px) {
+            // font-size: calc(.0 * 0vw + 1.8em);
+            // height: 80em;
+        }
+    }
+
+    &__card {
+        padding: 1.2em;
+        padding-left: 1.6em;
+        width: 36em;
+        height: 23em;
+        background-color: white;
+        background-color: #74d414;
+        overflow: hidden;
+        color: $--color-DarkLow;
+        box-shadow: 0 1px 1px 1px rgb(184, 184, 184);
+
+        @media (max-width: 400px) {
+            width: 100%;
+            height: 30em;
+        }
+    }
+
+    &__tech {
+        position: relative;
+        margin-bottom: 3em;
+        text-transform: uppercase;
+        font-size: .9em;
+        max-width: 49.85%;
+
+        @media (max-width: 400px) {
+            max-width: 100%;
+        }
+
+        &::after {
+            content:"";
+            position: absolute;
+            bottom: -1em;
+            right: 1.4em;
+            width: 4em;
+            height: .45em;
+            background-color: $--color-DarkLow ;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: .5em;
+        font-size: 3em;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        @media (max-width: 400px) {
+            font-size: 2.9em;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        margin: 0;
+        margin-bottom: 1.8em;
+    }
+
+    &__button {
+        margin-top: 2em;
+        background: transparent;
+        @include HoverGif();
+    }
+}

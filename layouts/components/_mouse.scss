@@ -1,0 +1,47 @@
+
+
+// Mouse For WebSite All 
+
+
+.mouse  {
+    position: relative;
+    position: fixed;
+    left: 1.3em;
+    bottom: 2.9em;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    height: 9em;
+    width: 3em;
+
+    @media (max-width: 600px) {
+        left: 2.65em;
+        bottom: 3.50em;
+    }
+
+    &__scrolling {
+        margin-right: .45em;
+        animation: ScrollMouse 2s ease-in-out infinite;
+        transform: translateY(120%);
+
+        @keyframes ScrollMouse {
+            to {
+                transform: translateY(-30%);
+            }
+            
+            from {
+                transform: translateY(120%);
+            }
+        }
+    }
+
+    &__mouse {
+        cursor: pointer;
+    }
+}
+
+.MouseScrollMouse {
+    display: flex;
+    z-index: 800;
+}

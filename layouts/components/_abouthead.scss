@@ -1,0 +1,219 @@
+
+
+
+
+// Design For About Head 
+
+.abouthead {
+        position: relative;
+        background-color: $--secondaryBackground;
+        min-height: 27em;
+
+
+        @media (max-width: 600px) {
+            font-size: calc(.0 * 0vw + 1.28em);
+            min-height: 50em;
+            background-color: rgb(231, 231, 231);
+        }
+
+        @media (max-width: 440px) {
+            font-size: calc(.0 * 0vw + 1.54em);
+        }
+
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 27em;
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                height: 36.50em;
+            }
+        }
+    
+        &__title {
+            position: relative;
+            margin: 0;
+            margin-bottom: 1em;
+            font-size: 1.55em;
+            font-weight: 400;
+
+            &::after {
+                content:"";
+                position: absolute;
+                bottom: -.45em;
+                left: 0;
+                width: 10%;
+                height: .095em;
+                background-color: #74D414;
+            }
+    
+            &::before {
+                content:"";
+                position: absolute;
+                bottom: -.45em;
+                left: 2.22em;
+                width: 8%;
+                height: .095em;
+                background: linear-gradient(to right , #74d414bb,#74d41476,#74d41416);
+            }
+        }
+
+        &__content {
+            margin: 0;
+            margin-bottom: 8em;
+            
+            @include subTit();
+
+            @media (max-width: 600px) {
+                margin-bottom: 6em;
+            }
+        }
+
+        &__link {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+
+            @include HoverGif();
+        }
+
+        &__left {
+            padding-top: 5em;
+            width: 40%;
+
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+        }
+
+        &__bule-bottom {//Element bule bottom -> element in html party LEFT
+            position: absolute;
+            transform: translateX(2240%);
+            bottom: -1em;
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            outline: .075em solid  $--borderColor;
+            outline-offset: .40em;
+            z-index: 4;
+            background: transparent url('/img/roundedimage.png') no-repeat center center / contain;
+            
+            @media (max-width: 600px) {
+                bottom: -3em;
+                transform: translateX(890%);
+                outline: none;
+                border: .075em solid $--borderColor;
+            }
+
+            @media (max-width: 440px) {
+                bottom: -4.60em;
+            }
+        }
+
+        // Right
+        &__right {
+            position: relative;
+            overflow: hidden;
+            width: 55%;
+            height: 100%;
+            z-index: 3;
+
+            @media (max-width: 600px) {
+                width: 100%;
+                overflow:visible;
+            }
+
+            &::after {// For bule rounded bottom right element for right
+                content:"";
+                position: absolute;
+                right: 1em;
+                bottom: 10em;
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                outline: .075em solid $--borderColor;
+                outline-offset: .40em;
+                z-index: 3;
+                background: transparent url('/img/roundedimage.png') no-repeat center center / contain;
+           
+                @media (max-width: 600px) {
+                    left: 5.57em;
+                    bottom: 8em;
+                    outline: none;
+                    border: .075em solid $--borderColor;
+                }
+            }
+        }
+
+        &__modal {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            &::after {//For border element for right
+                content:"";
+                position: absolute;
+                top: -1em;
+                left: 6.5em;
+                border-radius: 50%;
+                border: .075em solid  $--borderColor;
+                width: 80%;
+                height: 117%;
+
+                 @media (max-width: 600px) {
+                    width: 100%;
+                 }
+
+                 @media (max-width: 440px) {
+                    width: 130%;
+                    height: 125%;
+                 }
+            }
+
+            &::before {// For bule rounded top  element for right
+                content:"";
+                position: relative;
+                top: -11em;
+                left: 10.65em;
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                outline: .075em solid  $--borderColor;
+                outline-offset: .40em;
+                z-index: 3;
+                background: transparent url('/img/roundedimage.png') no-repeat center center / contain;
+            
+                @media (max-width: 600px) {
+                    top: -10.20em;
+                    left: 17.90em;
+                    outline: none;
+                    border: .075em solid $--borderColor;
+                }
+            }
+        }
+
+        &__lg-img {
+            position: relative;
+            width: 90%;
+            height: 70%;
+            z-index: -1;
+
+
+            &::before {
+                content:"";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent url('/img/fille.png') no-repeat center center / contain;
+            }
+        }
+}

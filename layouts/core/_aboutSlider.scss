@@ -1,0 +1,298 @@
+
+
+
+
+// Design For AboutSlider 
+
+
+.aboutSlider  {
+    padding: 2em 0;
+
+
+    @media (max-width: 600px) {
+        font-size: calc(.0 * 0vw + 1.25em);
+    }
+
+    @media (max-width: 440px) {
+        font-size: calc(.0 * 0vw + 1.35em);
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: .75em;
+        margin-bottom: .65em;
+        font-size: 1.15em;
+        font-weight: 400;
+        text-transform: uppercase;
+        // font-size: 1.5em;
+        // font-weight: 400;
+        // max-width: 99.9%;
+    }
+
+    &__sub-title {
+        margin: 0;
+        margin-bottom: 1em;
+        font-size: .85em;
+        font-weight: 300;
+        line-height: 155%;
+        max-width: 59.9%;
+
+        > span {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            max-width: 100%;
+        }
+    }
+
+    &__preview {
+        @media (max-width: 600px) {
+        }
+    }
+
+    &__layouts {
+        position: relative;
+        display: flex;
+        max-width: 100%;
+        overflow-x: hidden;
+
+
+        @media (max-width: 600px) {
+            // height: 56em;
+            height: 48.5em;
+        }
+    }
+
+    &__top {
+        display: flex;
+        padding: 0;
+        padding-bottom: .35em;
+        list-style: none;
+        border-bottom: .1em solid rgb(226, 226, 226);
+        max-width: 96%;
+    }
+
+    &__top-item {// Button de direction -> Item's
+        position: relative;
+        margin-right: 3em;
+        font-size: .80em;
+        font-weight: 500;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        cursor: pointer;
+
+        &:first-child {
+            color: #64bb0d;
+
+            &::after {
+                content:"";
+                position: absolute;
+                left: 0;
+                bottom: -.53em;
+                width: 100%;
+                height: .12em;
+                background-color: #74D414;
+            }
+        }
+
+        &:active {
+            color: #74D414;
+        }
+    }
+
+    // Bloc Bottom 
+    &__bottom {
+        display: flex;
+        min-width: 73.95em;
+        // width: 100%;
+        transition: transform .5s ease-in-out;
+        animation: FlurLayouts 1s ease-in-out infinite;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            min-width: 100%;
+            min-height: 38em;
+        }
+
+    }
+
+    .bottomCol-1 {
+        // transform: translateX(-100%);
+    }
+
+    .colMede {
+        color: #74D414;
+
+        &::after {
+            content:"";
+            position: absolute;
+            left: 0;
+            bottom: -.53em;
+            width: 100%;
+            height: .12em;
+            background-color: #74D414;
+        }
+    }
+
+    // Child Image
+    .bottomCol-1 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.394),rgba(0, 0, 0, 0.347)),url('/img/studentReussite3.jpeg');
+
+        @media (max-width: 600px) {
+            background-image: none;
+        }
+    }
+
+    .bottomCol-2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.394),rgba(0, 0, 0, 0.347)),url('/img/docteur1.jpeg');
+
+        @media (max-width: 600px) {
+            background-image: none;
+        }
+    }
+
+    .bottomCol-3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.394),rgba(0, 0, 0, 0.347)),url('/img/businessMen.jpeg');
+        
+        @media (max-width: 600px) {
+            background-image: none;
+        }
+    }
+    
+    .bottomCol-4 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.394),rgba(0, 0, 0, 0.347)),url('/img/aboutparticulier.jpeg');
+        background-repeat: no-repeat!important;
+        background-size: contain;
+
+        @media (max-width: 600px) {
+            background-image: none;
+        }
+    }
+
+    &__bottom-image {
+        flex-basis: 70em;
+        min-height: 27em;
+        background-repeat: no-repeat!important;
+        background-position: top center;
+        background-size: cover;
+
+        @media (max-width: 600px) {
+            min-height: 0;
+            min-height: 18em;
+            flex-basis: 0;
+            width: 100%;
+            background-position: center bottom!important;
+            background-image: none;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: 601px) {
+            display: none;
+        }
+    }
+
+    .aboutSlider__bottom__image-particuliers {// Classe uniquement pour cette image de photo
+        > img {
+            object-fit: contain;
+        }
+    }
+
+    .bottomCol-4 {
+        background-color: rgba(0, 0, 0, 0.865);    
+    }
+
+    //Child Text 
+    &__bottom-text {
+        padding: 1.5em 1em;
+        flex-basis: 50em;
+        min-height: 20em;
+        background: black;
+        color: #ccc;
+
+        @media (max-width: 600px) {
+            // height: 0;
+        }
+    }
+
+    &__bottom-title {
+        position: relative;
+        margin-bottom: 1.5em;
+        font-size: 1.2em;
+        font-weight: 400;
+        text-transform: uppercase;
+        max-width: 80%;
+
+        &::after {
+            content:"";
+            position: absolute;
+            left: 0;
+            bottom: -.75em;
+            width: 25%;
+            height: .120em;
+            background-color: #74D414;
+        }
+
+        > span {
+            color: #74D414;
+        }
+    }
+
+    &__bottom-content {
+        margin: 0;
+        margin-bottom: .75em;
+        font-size: .80em;
+        font-weight: 300;
+        max-width: 99%;
+    }
+
+    &__bottom-btn {
+        position: relative;
+        margin-top: 2em;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 400;
+        z-index: 2;
+        color: #fff;
+        transition: color .3s linear;
+
+        &::after {
+            content:"";
+            position: absolute;
+            left: 0;
+            top: -1.45em;
+            border-radius: 50%;
+            width: 4em;
+            height: 4em;
+            z-index: -1;
+            background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.222)),url('/img/video.gif');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition: transform .5s ease-in-out, background-image 0.5s ease-in-out;
+
+        }
+        &:hover {
+            color: #74D414;
+        &::after{
+            transform: scale(113%);
+            background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),url('/img/video.gif');
+        }
+
+        span {
+            color:#74D414
+        }
+      }
+
+      > span {
+        color: black;
+      }
+    }
+}

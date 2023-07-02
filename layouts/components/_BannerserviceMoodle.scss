@@ -1,0 +1,28 @@
+
+
+
+//Design For Banner Moodle in service.html 
+
+.BannerMoodle {
+    background: transparent url('/img/groupMoodle.svg') no-repeat center center / contain;
+    min-height: 25em;
+    background-color: #74D414;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        min-height: 28.46em;
+
+    }
+
+    &__content {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        line-height: 150%;
+        width: 25em;
+    }
+}
